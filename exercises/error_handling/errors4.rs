@@ -1,5 +1,7 @@
 // errors4.rs
-// Execute `rustlings hint errors4` or use the `hint` watch subcommand for a hint.
+//
+// Execute `rustlings hint errors4` or use the `hint` watch subcommand for a
+// hint.
 
 #[derive(PartialEq, Debug)]
 struct PositiveNonzeroInteger(u64);
@@ -18,6 +20,7 @@ impl PositiveNonzeroInteger {
             }
             return Err(CreationError::Negative);
         }
+
         Ok(PositiveNonzeroInteger(value as u64))
     }
 }
