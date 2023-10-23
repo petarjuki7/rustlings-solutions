@@ -11,11 +11,11 @@
 struct Package {
     sender_country: String,
     recipient_country: String,
-    weight_in_grams: u32,
+    weight_in_grams: i32,
 }
 
 impl Package {
-    fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Package {
+    fn new(sender_country: String, recipient_country: String, weight_in_grams: i32) -> Package {
         if weight_in_grams < 10 {
             // This is not how you should handle errors in Rust,
             // but we will learn about error handling later.
@@ -38,7 +38,6 @@ impl Package {
     }
 
     fn get_fees(&self, cents_per_gram: i32) -> i32 {
-
         // Something goes here...
         self.weight_in_grams * cents_per_gram
     }
